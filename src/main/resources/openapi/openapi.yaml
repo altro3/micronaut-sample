@@ -1,0 +1,9 @@
+openapi: 3.0.3
+info:
+  title: Sample App API
+  version: 1.0.0
+tags:
+  - name: Invoice
+paths:
+  /api/invoice:
+    $ref: "./paths/invoice.yml"

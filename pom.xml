@@ -22,16 +22,44 @@
         <micronaut.test.resources.enabled>false</micronaut.test.resources.enabled>
         <micronaut.runtime>netty</micronaut.runtime>
         <exec.mainClass>dev.itrust.sample.Application</exec.mainClass>
+
+        <!-- OpenAPI config   -->
+        <micronaut.openapi.generate.server>true</micronaut.openapi.generate.server>
+        <micronaut.openapi.definition>src/main/resources/openapi/openapi.yaml</micronaut.openapi.definition>
+        <micronaut.openapi.api.package.name>dev.itrust.sample.fk.api</micronaut.openapi.api.package.name>
+        <micronaut.openapi.model.package.name>dev.itrust.sample.fk.api.model</micronaut.openapi.model.package.name>
+        <micronaut.openapi.invoker.package.name>dev.itrust.sample.fk</micronaut.openapi.invoker.package.name>
+        <micronaut.openapi.use.reactive>false</micronaut.openapi.use.reactive>
+        <micronaut.openapi.server.use.auth>false</micronaut.openapi.server.use.auth>
+
     </properties>
 
     <repositories>
         <repository>
             <id>central</id>
             <url>https://repo.maven.apache.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>snapshots</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
         </repository>
     </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>io.micronaut.openapi</groupId>
+            <artifactId>micronaut-openapi</artifactId>
+            <version>6.12.4-20240907.220242-3</version>
+        </dependency>
         <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
