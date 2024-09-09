@@ -4,7 +4,6 @@ import dev.itrust.sample.repository.InvoiceItemRepository;
 import dev.itrust.sample.repository.InvoiceRepository;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
-import lombok.Generated;
 import lombok.RequiredArgsConstructor;
 
 /**

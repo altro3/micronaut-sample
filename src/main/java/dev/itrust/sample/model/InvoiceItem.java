@@ -6,7 +6,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
-import io.micronaut.configuration.hibernate.jpa.proxy.*;
 
 import java.math.BigDecimal;
 
@@ -17,7 +16,6 @@ import java.math.BigDecimal;
 @Entity
 @Getter
 @Setter
-@GenerateProxy
 public class InvoiceItem extends GenericBaseEntity<Long> {
 
     private String name;
