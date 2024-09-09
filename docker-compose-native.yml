@@ -1,16 +1,9 @@
 version: '3'
 services:
 
-  db:
-    image: postgres:15-alpine
-    volumes:
-      - pg_data:/var/lib/postgresql/data
+  app:
+    image: micronaut-sample:latest
     environment:
-      - POSTGRES_PASSWORD=secret
-      - POSTGRES_USER=user
-      - POSTGRES_DB=sample
+      - DATASOURCES_DEFAULT_URL=jdbc:postgresql://db:5432/sample
     ports:
-      - "5432:5432"
-
-volumes:
-  pg_data:
+      - "8080:8080"

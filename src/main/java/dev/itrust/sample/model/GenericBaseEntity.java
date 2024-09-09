@@ -2,6 +2,7 @@ package dev.itrust.sample.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,7 +24,7 @@ import java.util.Objects;
 @MappedSuperclass
 public class GenericBaseEntity<T extends Serializable> implements Serializable {
 
-    @EmbeddedId
+    @Id
     protected T id;
 
     @CreationTimestamp

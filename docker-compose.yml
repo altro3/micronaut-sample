@@ -6,9 +6,9 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=123ewqasd
-      - POSTGRES_USER=apcoa_user
-      - POSTGRES_DB=apcoa_fk
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_USER=user
+      - POSTGRES_DB=sample
     ports:
       - "5432:5432"
 
