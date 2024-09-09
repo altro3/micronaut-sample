@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: dev.itrust.sample
+testFramework: junit
+sourceLanguage: java
+buildTool: maven
+features: [app-name, data, data-jpa, flyway, graalvm, hamcrest, http-client-test, java, java-application, jdbc-hikari, jib, junit, logback, lombok, maven, maven-enforcer-plugin, micronaut-aot, micronaut-http-validation, netty-server, postgres, properties, readme, serialization-jackson, shade, static-resources, test-resources, validation]
