@@ -23,5 +23,18 @@ mvn package -Dpackaging=docker-native -Pgraalvm -Dmaven.test.skip=true
 ./mvnw package -Dpackaging=docker-crac -Dmaven.test.skip=true
 ````
 
+## Native vs JDK
+
+### Native
+stating 337ms / 280ms
+first endpoint call (Micronaut lazy loading and cache initialization): 109ms
+next calls (no database): 9ms
+reading from database: 10ms
+
+### JDK
+starting: 2533ms
+first endpoint call (Micronaut lazy loading and cache initialization): 712ms
+next calls (no database, cache only): 21ms / 16ms / 14 ms
+reading from database: 22ms
 
 
