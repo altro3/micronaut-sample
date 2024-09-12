@@ -10,12 +10,6 @@
     ]
   },
   {
-    "name":"dev.itrust.sample.model.BillingEntityData",
-    "allDeclaredFields":true,
-    "queryAllDeclaredMethods":true,
-    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"setApartmentNumber","parameterTypes":["java.lang.String"] }, {"name":"setBankAccount","parameterTypes":["java.lang.String"] }, {"name":"setBankName","parameterTypes":["java.lang.String"] }, {"name":"setBuildingNumber","parameterTypes":["java.lang.String"] }, {"name":"setCity","parameterTypes":["java.lang.String"] }, {"name":"setCompanyName","parameterTypes":["java.lang.String"] }, {"name":"setDateFrom","parameterTypes":["java.time.LocalDate"] }, {"name":"setEffectiveRange","parameterTypes":["io.hypersistence.utils.hibernate.type.range.Range"] }, {"name":"setEmail","parameterTypes":["java.lang.String"] }, {"name":"setId","parameterTypes":["java.util.UUID"] }, {"name":"setInvoicePrefix","parameterTypes":["java.lang.String"] }, {"name":"setPostCode","parameterTypes":["java.lang.String"] }, {"name":"setStreet","parameterTypes":["java.lang.String"] }]
-  },
-  {
     "name":"io.hypersistence.utils.hibernate.type.array.internal.AbstractArrayTypeDescriptor",
     "methods":[{"name":"setJdbcType","parameterTypes":[] }]
   },
