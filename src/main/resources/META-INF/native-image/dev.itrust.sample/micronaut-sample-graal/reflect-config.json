@@ -8,5 +8,74 @@
       {"name":"<init>","parameterTypes":["org.hibernate.annotations.CurrentTimestamp","java.lang.reflect.Member","org.hibernate.generator.GeneratorCreationContext"] },
       {"name":"<init>","parameterTypes":["org.hibernate.annotations.UpdateTimestamp","java.lang.reflect.Member","org.hibernate.generator.GeneratorCreationContext"] }
     ]
+  },
+  {
+    "name":"dev.itrust.sample.model.BillingEntityData",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"setApartmentNumber","parameterTypes":["java.lang.String"] }, {"name":"setBankAccount","parameterTypes":["java.lang.String"] }, {"name":"setBankName","parameterTypes":["java.lang.String"] }, {"name":"setBuildingNumber","parameterTypes":["java.lang.String"] }, {"name":"setCity","parameterTypes":["java.lang.String"] }, {"name":"setCompanyName","parameterTypes":["java.lang.String"] }, {"name":"setDateFrom","parameterTypes":["java.time.LocalDate"] }, {"name":"setEffectiveRange","parameterTypes":["io.hypersistence.utils.hibernate.type.range.Range"] }, {"name":"setEmail","parameterTypes":["java.lang.String"] }, {"name":"setId","parameterTypes":["java.util.UUID"] }, {"name":"setInvoicePrefix","parameterTypes":["java.lang.String"] }, {"name":"setPostCode","parameterTypes":["java.lang.String"] }, {"name":"setStreet","parameterTypes":["java.lang.String"] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.array.internal.AbstractArrayTypeDescriptor",
+    "methods":[{"name":"setJdbcType","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.array.internal.BooleanArrayTypeDescriptor",
+    "methods":[{"name":"setJdbcType","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.array.internal.DateArrayTypeDescriptor",
+    "methods":[{"name":"setJdbcType","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.array.internal.DecimalArrayTypeDescriptor",
+    "methods":[{"name":"setJdbcType","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.array.internal.DoubleArrayTypeDescriptor",
+    "methods":[{"name":"setJdbcType","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.array.internal.EnumArrayTypeDescriptor",
+    "methods":[{"name":"setJdbcType","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.array.internal.FloatArrayTypeDescriptor",
+    "methods":[{"name":"setJdbcType","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.array.internal.IntArrayTypeDescriptor",
+    "methods":[{"name":"setJdbcType","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.array.internal.LocalDateArrayTypeDescriptor",
+    "methods":[{"name":"setJdbcType","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.array.internal.LocalDateTimeArrayTypeDescriptor",
+    "methods":[{"name":"setJdbcType","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.array.internal.LongArrayTypeDescriptor",
+    "methods":[{"name":"setJdbcType","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.array.internal.StringArrayTypeDescriptor",
+    "methods":[{"name":"setJdbcType","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.array.internal.TimestampArrayTypeDescriptor",
+    "methods":[{"name":"setJdbcType","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.array.internal.UUIDArrayTypeDescriptor",
+    "methods":[{"name":"setJdbcType","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.range.PostgreSQLRangeType",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"io.hypersistence.utils.hibernate.type.range.Range"
   }
 ]

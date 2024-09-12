@@ -1,6 +1,9 @@
 package dev.itrust.sample.model;
 
+import io.hypersistence.utils.hibernate.type.range.PostgreSQLRangeType;
+import io.hypersistence.utils.hibernate.type.range.Range;
 import io.micronaut.core.annotation.Introspected;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.IdClass;
@@ -10,6 +13,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.Type;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -32,6 +36,13 @@ public class BillingEntityData extends BaseEntity {
 
     @Id
     private LocalDate dateFrom;
+
+    @Column(
+            name = "effective_range",
+            columnDefinition = "daterange"
+    )
+    @Type(PostgreSQLRangeType.class)
+    private Range<LocalDate> effectiveRange = Range.infinite(LocalDate.class);
 
     @Size(max = 5)
     @NotBlank
@@ -75,8 +86,10 @@ public class BillingEntityData extends BaseEntity {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof BillingEntityData that)) return false;
-        return Objects.equals(id, that.id);
+        if (o == null || getClass() != o.getClass()) return false;
+        BillingEntityData that = (BillingEntityData) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(effectiveRange, that.effectiveRange);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package dev.itrust.sample.model;
 
 import io.micronaut.core.annotation.Introspected;
+import io.micronaut.core.annotation.ReflectiveAccess;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +19,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Introspected
+@ReflectiveAccess
 public class VersionedId {
 
     private UUID id;
