@@ -3,3 +3,7 @@ GET http://localhost:8080/sample
 
 
 ###
+GET http://localhost:8080/sample/customer/267a8a45-f6ea-46e7-9c21-2166936c9c2b/1
+
+###
+GET http://localhost:8080/sample/customer

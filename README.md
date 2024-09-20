@@ -11,6 +11,11 @@
 - reelection config file: `src/main/resources/META-INF/native-image/dev.itrust.sample/micronaut-sample-graal/reflect-config.json` 
 ---
 
+## CRaC staff
+
+- https://foojay.io/today/how-to-run-a-java-application-with-crac-in-a-docker-container/
+- https://docs.azul.com/core/crac/crac-guidelines.html#running-crac-in-a-virtualized-environment-docker
+
 ## Build native image
 
 ````shell
