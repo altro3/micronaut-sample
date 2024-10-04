@@ -1,5 +1,7 @@
 GET http://localhost:8080/sample
 
-
-
 ###
+GET http://localhost:8080/api/invoice/ce7140fb-eded-4d01-a3ac-bc0742a551bd
+Accept: application/json
+
+

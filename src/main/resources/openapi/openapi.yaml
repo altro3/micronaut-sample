@@ -32,6 +32,33 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorDTO'
+  /api/invoice/{id}:
+    get:
+      tags:
+        - Invoice
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+            format: uuid
+      operationId: loadInvoice
+      summary: load invoice
+      responses:
+        200:
+          description: Invoice
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/SalesInvoiceCreateDto'
+                  - $ref: '#/components/schemas/CurrencyInvoiceCreateDto'
+        403:
+          description: No access to cost center with Manager rights
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
 components:
   schemas:
     DocType:
