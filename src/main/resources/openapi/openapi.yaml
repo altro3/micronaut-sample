@@ -46,13 +46,13 @@ paths:
       summary: load invoice
       responses:
         200:
-          description: Invoice
+          description: Sales or Currency invoice
           content:
             application/json:
               schema:
                 oneOf:
-                  - $ref: '#/components/schemas/SalesInvoiceCreateDto'
-                  - $ref: '#/components/schemas/CurrencyInvoiceCreateDto'
+                  - $ref: '#/components/schemas/SalesInvoiceDto'
+                  - $ref: '#/components/schemas/CurrencyInvoiceDto'
         403:
           description: No access to cost center with Manager rights
           content:
@@ -84,6 +84,10 @@ components:
     SalesInvoiceCreateDto:
       allOf:
         - $ref: '#/components/schemas/BaseInvoiceDto'
+    SalesInvoiceDto:
+      allOf:
+        - $ref: '#/components/schemas/BaseInvoiceDto'
+        - $ref: '#/components/schemas/InvoiceCommonFields'
     CurrencyInvoiceCreateDto:
       allOf:
         - $ref: '#/components/schemas/SalesInvoiceCreateDto'
@@ -103,6 +107,17 @@ components:
             - currency
             - exchangeRate
             - exchangeDate
+    CurrencyInvoiceDto:
+      allOf:
+        - $ref: '#/components/schemas/CurrencyInvoiceCreateDto'
+        - $ref: '#/components/schemas/InvoiceCommonFields'
+    InvoiceCommonFields:
+      properties:
+        issuedUser:
+          type: string
+        issueDate:
+          type: string
+          format: date
     InvoiceIdDto:
       type: object
       properties:

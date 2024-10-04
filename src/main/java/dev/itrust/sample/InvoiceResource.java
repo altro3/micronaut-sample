@@ -1,10 +1,7 @@
 package dev.itrust.sample;
 
 import dev.itrust.sample.fk.api.InvoiceApi;
-import dev.itrust.sample.fk.api.model.CreateInvoiceRequest;
-import dev.itrust.sample.fk.api.model.CurrencyInvoiceCreateDto;
-import dev.itrust.sample.fk.api.model.DocType;
-import dev.itrust.sample.fk.api.model.InvoiceIdDto;
+import dev.itrust.sample.fk.api.model.*;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import jakarta.validation.Valid;
@@ -26,9 +23,9 @@ public class InvoiceResource implements InvoiceApi {
     }
 
     @Override
-    public CreateInvoiceRequest loadInvoice(UUID id) {
+    public LoadInvoice200Response loadInvoice(UUID id) {
 
-        val invoice = new CurrencyInvoiceCreateDto("EUR", BigDecimal.valueOf(4.75), LocalDate.now(), "12345678");
+        val invoice = new CurrencyInvoiceDto("12345678", "EUR", BigDecimal.valueOf(4.75), LocalDate.now());
         invoice.setDocType(DocType.FW);
 
         return invoice;
